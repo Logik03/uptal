@@ -1,0 +1,5 @@
+<div class="board">
+    <app-candidate-list [candidates]="applied" title="Applied" (dropped)="drop($event)"></app-candidate-list>
+    <app-candidate-list [candidates]="shortlisted" title="Shortlisted" (dropped)="drop($event)"></app-candidate-list>
+    <app-candidate-list [candidates]="interview" title="Interview" (dropped)="drop($event)"></app-candidate-list>
+  </div>
