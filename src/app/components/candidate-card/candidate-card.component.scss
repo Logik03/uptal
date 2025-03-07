@@ -1,49 +1,99 @@
-.card {
+.card-container {
     display: flex;
     align-items: center;
-    background: white;
+    background: #f8faff;
     border-radius: 12px;
     padding: 12px;
-    margin-bottom: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-  }
-  
-  .avatar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Adjust if needed */
+    margin-bottom: 12px;
+    overflow: hidden; /* Prevents content from spilling */
+}
+
+.avatar {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 25%;
     object-fit: cover;
-  }
-  
-  .details {
-    margin-left: 10px;
-  }
-  
-  h4 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  p {
-    margin: 2px 0;
-    font-size: 14px;
-    color: gray;
-  }
-  
-  .rating {
+    margin-right: 12px;
+}
+
+.details {
+    flex: 1;
+    min-width: 0; /* Ensures flex behavior works properly */
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.name-status {
     display: flex;
     align-items: center;
     font-size: 14px;
-  }
-  
-  .rating img {
-    width: 16px;
-    height: 16px;
-    margin-left: 4px;
-  }
+    font-weight: 600;
+    color: #333;
+}
+
+.status-indicator {
+    width: 6px;
+    height: 6px;
+    background: #32d74b;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.new-badge {
+    background: #d6e4ff;
+    color: #3366ff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 8px;
+}
+
+.location {
+    font-size: 14px;
+    color: #8e8e93;
+    margin: 4px 0;
+}
+
+.rating-phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 3px 6px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rating-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-right: 4px;
+}
+
+.star-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.phone {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-left: 10px !important;
+}

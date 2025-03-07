@@ -1,11 +1,26 @@
-<div class="card" cdkDrag>
-    <img [src]="candidate.image" alt="Profile" class="avatar">
+<div class="card-container" cdkDrag>
+    <!-- Profile Image -->
+    <img [src]="candidate.image || 'https://i.pravatar.cc/50'" alt="Profile" class="avatar">
+  
+    <!-- Candidate Details -->
     <div class="details">
-      <h4>{{ candidate.name }}</h4>
-      <p>{{ candidate.location }}</p>
-      <div class="rating">
-        <span>{{ candidate.rating }}</span>
-        <img src="assets/star.svg" alt="star">
+      <div class="top-row">
+        <div class="name-status">
+          <span class="status-indicator"></span>
+          <strong>{{ candidate.name }}</strong>
+        </div>
+        <span class="new-badge">New</span>
+      </div>
+  
+      <p class="location">{{ candidate.location }}</p>
+  
+      <div class="rating-phone">
+        <div class="rating">
+          <span class="rating-value">{{ candidate.rating }}</span>
+          <img src="assets/star.svg" alt="star" class="star-icon">
+          <span class="phone">{{ candidate.phone }}</span>
+        </div>
+       
       </div>
     </div>
   </div>
