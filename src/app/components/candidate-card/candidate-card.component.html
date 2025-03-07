@@ -1,9 +1,11 @@
-<div class="candidate-card">
-    <img [src]="'https://via.placeholder.com/50'" alt="{{ candidate.name }}">
+<div class="card" cdkDrag>
+    <img [src]="candidate.image" alt="Profile" class="avatar">
     <div class="details">
       <h4>{{ candidate.name }}</h4>
       <p>{{ candidate.location }}</p>
-      <p>{{ candidate.phone }}</p>
+      <div class="rating">
+        <span>{{ candidate.rating }}</span>
+        <img src="assets/star.svg" alt="star">
+      </div>
     </div>
-    <span class="rating">⭐ {{ candidate.rating }}</span>
   </div>

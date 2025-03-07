@@ -3,13 +3,15 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { Candidate } from '../../core/models/candidate-model';
 import { CandidateCardComponent} from '../candidate-card/candidate-card.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-candidate-list',
   standalone: true,
   imports: [
     DragDropModule,
-    CandidateCardComponent
+    CandidateCardComponent,
+    NgFor
   ],
   templateUrl: './candidate-list.component.html',
   styleUrl: './candidate-list.component.scss'
